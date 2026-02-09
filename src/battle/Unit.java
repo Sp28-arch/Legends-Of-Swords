@@ -74,6 +74,5 @@ public abstract class Unit {
     public int getMana() {
         return mana;
     }
-
 }
 
