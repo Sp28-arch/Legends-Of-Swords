@@ -1,29 +1,21 @@
 package Pve;
 
-import java.util.Random;
 
 public class Campaign {
-    private int currentFloor = 1;
+
     private Party party;
-    private Random random = new Random();
+    private int currentRoom;
 
     public Campaign(Party party) {
         this.party = party;
+        this.currentRoom = 1;
     }
 
-    public int getFloor() {
-        return currentFloor;
+    public void start() {
+        System.out.println("Welcome to the Dungeon");
     }
 
-    public void nextFloor() {
-        currentFloor++;
-    }
-
-    public Room generateRoom() {
-        if (random.nextBoolean()) {
-            return new BattleRoom(party, currentFloor);
-        } else {
-            return new InnRoom(party, currentFloor);
-        }
+    public Party getParty() {
+        return party;
     }
 }

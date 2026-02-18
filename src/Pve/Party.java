@@ -1,13 +1,20 @@
 package Pve;
+
+import battle.Hero;
 import java.util.ArrayList;
 import java.util.List;
-import battle.Hero;
+
 
 public class Party {
-    private List<Hero> heroes = new ArrayList<>();
 
-    public void addHero(Hero h) {
-        heroes.add(h);
+    private List<Hero> heroes;
+
+    public Party() {
+        heroes = new ArrayList<>();
+    }
+
+    public void addHero(Hero hero) {
+        heroes.add(hero);
     }
 
     public List<Hero> getHeroes() {

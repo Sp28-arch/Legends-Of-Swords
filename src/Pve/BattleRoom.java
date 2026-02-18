@@ -1,19 +1,18 @@
 package Pve;
 
-import java.util.ArrayList;
+import battle.Hero;
 import java.util.List;
-import battle.Enemy;
-import battle.Battle;
+
 
 public class BattleRoom extends Room {
 
-    public BattleRoom(Party party, int floor) {
-        super(party, floor);
+    public BattleRoom(int floor) {
+        super(floor);
     }
 
     @Override
-    public void enter() {
-        System.out.println("Battle Room " + floor);
+    public void enter(Party party) {
+        System.out.println("Entered Battle Room");
 
     }
 }
